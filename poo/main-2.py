@@ -5,31 +5,17 @@ class Agencia:
         self.dni = dni
         self.num_asientos = num_asientos
         self.fecha_viaje = fecha_viaje
-        self.origen = None
-        self.destino = None
-        self.estado = "Pendiente"
+       
 
-    def set_origen(self, origen):
-        self.origen = origen
+Ronald=Agencia("Ronald","VALENCIA",76868915,1,"15/16/24")
+print(Ronald.apellido)
+print(Ronald.dni)
+print(Ronald.num_asientos)
+print(Ronald.fecha_viaje)
+""""""
 
-    def set_destino(self, destino):
-        self.destino = destino
 
-    def ingresar(self):
-        self.estado = "Ingresado"
 
-    def cancelar(self):
-        self.estado = "Cancelado"
+    
 
-    def viaje(self):
-        self.estado = "En viaje"
 
-    def ver_estado(self):
-        return f"Estado del pasaje: {self.estado}"
-
-# Ejemplo de uso
-pasajero = Agencia("Juan", "Pérez", "12345678", 2, "2024-10-15")
-pasajero.set_origen("Lima")
-pasajero.set_destino("Cusco")
-pasajero.ingresar()
-print(pasajero.ver_estado())  # Salida: Estado del pasaje: Ingresado
